@@ -1,1 +1,34 @@
-#powerbi
+1. What is the purpose of the "Applied Steps" pane in Power Query?
+It tracks each transformation step applied to your data and allows you to edit or remove them.
+2. How do you remove duplicate rows in Power Query?
+Use Home > Remove Duplicates, or right-click a column and choose Remove Duplicates.
+3. What does the "Filter" icon do in Power Query?
+It filters rows based on specific values or conditions in a column.
+4. How would you rename a column from "CustID" to "CustomerID"?
+Double-click the column name and type CustomerID.
+5. What happens if you click "Close & Apply" in Power Query?
+It applies all steps and loads the data into Power BI.
+6. Remove all rows where Quantity is less than 2.
+Filter the Quantity column to show only values greater than or equal to 2.
+7. Split the OrderDate column into separate "Year," "Month," and "Day" columns.
+Use Transform > Date > Year, then repeat for Month and Day.
+8. Replace all "Mouse" entries in the Product column with "Computer Mouse."
+Use Transform > Replace Values to replace "Mouse" with "Computer Mouse".
+9. Sort the table by OrderDate (newest first).
+Click the OrderDate column and choose Sort Descending.
+10. How would you handle null values in the Price column?
+Replace them with 0 or an average using Replace Values, or remove the rows.
+11. Write custom M-code to add a column calculating TotalSpent = Quantity * Price.
+m
+CopyEdit
+= Table.AddColumn(PreviousStep, "TotalSpent", each [Quantity] * [Price])
+12. Group the table by CustID to show total spending per customer.
+Use Home > Group By, group by CustID, and sum TotalSpent.
+13. Fix inconsistent date formats (e.g., 01/10/2023 vs. 2023-01-10) in OrderDate.
+Convert the column to Date type using Transform > Data Type > Date.
+14. Create a conditional column: Label orders as "High Value" if Price > 100.
+Use Add Column > Conditional Column, set the rule:
+If [Price] > 100 then "High Value", else null.
+15. Optimize the query to reduce refresh time (e.g., remove unused columns early).
+Remove unnecessary columns immediately after loading and reduce complex steps.
+
