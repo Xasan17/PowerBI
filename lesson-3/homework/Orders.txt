@@ -1,0 +1,5 @@
+CustID,Name,OrderDate,Product,Quantity,Price
+101,Alice,2023-01-10,Laptop,1,1200
+102,Bob,2023-01-15,Mouse,3,25
+101,Alice,2023-01-20,Keyboard,2,80
+103,Charlie,2023-01-25,Monitor,1,300
