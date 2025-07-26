@@ -1,0 +1,5 @@
+OrderID,CustID,Product,Quantity
+1001,101,Laptop,1
+1002,102,Mouse,3
+1003,101,Keyboard,2
+1004,103,Monitor,1
